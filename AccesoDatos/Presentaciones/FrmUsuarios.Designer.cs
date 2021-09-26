@@ -1,7 +1,7 @@
 ﻿
 namespace Presentaciones
 {
-    partial class FrmProductos
+    partial class FrmUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,15 @@ namespace Presentaciones
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.dtgUsuarios = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@ namespace Presentaciones
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 109);
-            this.panel1.TabIndex = 19;
+            this.panel1.TabIndex = 34;
             // 
             // label7
             // 
@@ -61,20 +61,20 @@ namespace Presentaciones
             this.label7.Location = new System.Drawing.Point(296, 36);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(198, 31);
+            this.label7.Size = new System.Drawing.Size(165, 31);
             this.label7.TabIndex = 17;
-            this.label7.Text = "PRODUCTOS";
+            this.label7.Text = "USUARIOS";
             // 
-            // dtgProductos
+            // dtgUsuarios
             // 
-            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductos.Location = new System.Drawing.Point(24, 202);
-            this.dtgProductos.Margin = new System.Windows.Forms.Padding(4);
-            this.dtgProductos.Name = "dtgProductos";
-            this.dtgProductos.RowHeadersWidth = 62;
-            this.dtgProductos.Size = new System.Drawing.Size(753, 185);
-            this.dtgProductos.TabIndex = 16;
-            this.dtgProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellEnter);
+            this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgUsuarios.Location = new System.Drawing.Point(24, 202);
+            this.dtgUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgUsuarios.Name = "dtgUsuarios";
+            this.dtgUsuarios.RowHeadersWidth = 62;
+            this.dtgUsuarios.Size = new System.Drawing.Size(753, 185);
+            this.dtgUsuarios.TabIndex = 31;
+            this.dtgUsuarios.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuarios_CellEnter);
             // 
             // txtBuscar
             // 
@@ -83,7 +83,7 @@ namespace Presentaciones
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(589, 30);
-            this.txtBuscar.TabIndex = 15;
+            this.txtBuscar.TabIndex = 30;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
@@ -94,8 +94,22 @@ namespace Presentaciones
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 25);
-            this.label1.TabIndex = 14;
+            this.label1.TabIndex = 29;
             this.label1.Text = "Buscar";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Image = global::Presentaciones.Properties.Resources.icons8_edit_property;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(435, 407);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(167, 43);
+            this.btnModificar.TabIndex = 36;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // pictureBox2
             // 
@@ -105,7 +119,7 @@ namespace Presentaciones
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabIndex = 35;
             this.pictureBox2.TabStop = false;
             // 
             // btnEliminar
@@ -117,7 +131,7 @@ namespace Presentaciones
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(167, 43);
-            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.TabIndex = 33;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -131,44 +145,30 @@ namespace Presentaciones
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(167, 43);
-            this.btnAgregar.TabIndex = 17;
+            this.btnAgregar.TabIndex = 32;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Image = global::Presentaciones.Properties.Resources.icons8_edit_property;
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(435, 407);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(167, 43);
-            this.btnModificar.TabIndex = 21;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // FrmProductos
+            // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 463);
+            this.ClientSize = new System.Drawing.Size(800, 466);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dtgProductos);
+            this.Controls.Add(this.dtgUsuarios);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
-            this.Name = "FrmProductos";
-            this.Text = "FrmProductos";
-            this.Load += new System.EventHandler(this.FrmProductos_Load);
+            this.Name = "FrmUsuarios";
+            this.Text = "FrmUsuarios";
+            this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,14 +177,14 @@ namespace Presentaciones
 
         #endregion
 
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dtgProductos;
+        private System.Windows.Forms.DataGridView dtgUsuarios;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnModificar;
     }
 }

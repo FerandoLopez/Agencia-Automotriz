@@ -46,6 +46,8 @@ namespace Presentaciones
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbPermiso = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -195,7 +197,7 @@ namespace Presentaciones
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_product_128px_1;
+            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_player_male_48;
             this.pictureBox1.Location = new System.Drawing.Point(56, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -211,13 +213,14 @@ namespace Presentaciones
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = global::Presentaciones.Properties.Resources.icons8_cancel_2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(476, 380);
+            this.btnCancelar.Location = new System.Drawing.Point(476, 444);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(150, 52);
             this.btnCancelar.TabIndex = 58;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -226,19 +229,42 @@ namespace Presentaciones
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = global::Presentaciones.Properties.Resources.icons8_save_close;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(293, 380);
+            this.btnGuardar.Location = new System.Drawing.Point(293, 444);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(150, 52);
             this.btnGuardar.TabIndex = 57;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(48, 389);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 25);
+            this.label6.TabIndex = 65;
+            this.label6.Text = "Permiso";
+            // 
+            // cbPermiso
+            // 
+            this.cbPermiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPermiso.FormattingEnabled = true;
+            this.cbPermiso.Location = new System.Drawing.Point(293, 381);
+            this.cbPermiso.Name = "cbPermiso";
+            this.cbPermiso.Size = new System.Drawing.Size(331, 33);
+            this.cbPermiso.TabIndex = 66;
             // 
             // FrmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 458);
+            this.ClientSize = new System.Drawing.Size(654, 533);
+            this.Controls.Add(this.cbPermiso);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtRFC);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNacimiento);
@@ -256,6 +282,7 @@ namespace Presentaciones
             this.Controls.Add(this.label1);
             this.Name = "FrmAgregarUsuario";
             this.Text = "FrmAgregarUsuario";
+            this.Load += new System.EventHandler(this.FrmAgregarUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -283,5 +310,7 @@ namespace Presentaciones
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtRFC;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbPermiso;
     }
 }

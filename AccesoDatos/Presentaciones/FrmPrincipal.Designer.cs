@@ -36,6 +36,7 @@ namespace Presentaciones
             this.tsProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónDeHerramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsHerramientas = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +47,11 @@ namespace Presentaciones
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administraciónDeUsuariosToolStripMenuItem,
             this.administraciónDeProductosToolStripMenuItem,
-            this.administraciónDeHerramientasToolStripMenuItem});
+            this.administraciónDeHerramientasToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(913, 72);
+            this.menuStrip1.Size = new System.Drawing.Size(1074, 72);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "Administración de Usuarios";
             // 
@@ -68,7 +70,7 @@ namespace Presentaciones
             this.tsUsuarios.Image = global::Presentaciones.Properties.Resources.icons8_user_40px;
             this.tsUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsUsuarios.Name = "tsUsuarios";
-            this.tsUsuarios.Size = new System.Drawing.Size(173, 46);
+            this.tsUsuarios.Size = new System.Drawing.Size(244, 46);
             this.tsUsuarios.Text = "Usuarios";
             this.tsUsuarios.Click += new System.EventHandler(this.tsUsuarios_Click);
             // 
@@ -87,7 +89,7 @@ namespace Presentaciones
             this.tsProductos.Image = global::Presentaciones.Properties.Resources.icons8_product_48px;
             this.tsProductos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsProductos.Name = "tsProductos";
-            this.tsProductos.Size = new System.Drawing.Size(191, 54);
+            this.tsProductos.Size = new System.Drawing.Size(252, 54);
             this.tsProductos.Text = "Productos";
             this.tsProductos.Click += new System.EventHandler(this.tsProductos_Click);
             // 
@@ -106,19 +108,30 @@ namespace Presentaciones
             this.tsHerramientas.Image = global::Presentaciones.Properties.Resources.icons8_maintenance_40px;
             this.tsHerramientas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsHerramientas.Name = "tsHerramientas";
-            this.tsHerramientas.Size = new System.Drawing.Size(207, 46);
+            this.tsHerramientas.Size = new System.Drawing.Size(244, 46);
             this.tsHerramientas.Text = "Herramientas";
             this.tsHerramientas.Click += new System.EventHandler(this.tsHerramientas_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = global::Presentaciones.Properties.Resources.icons8_enter_64;
+            this.salirToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(117, 68);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 473);
+            this.ClientSize = new System.Drawing.Size(1074, 530);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -136,5 +149,6 @@ namespace Presentaciones
         private System.Windows.Forms.ToolStripMenuItem tsProductos;
         private System.Windows.Forms.ToolStripMenuItem administraciónDeHerramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsHerramientas;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

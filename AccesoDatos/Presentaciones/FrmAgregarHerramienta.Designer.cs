@@ -81,7 +81,7 @@ namespace Presentaciones
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_product_128px_1;
+            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_maintenance_64px;
             this.pictureBox1.Location = new System.Drawing.Point(56, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -95,7 +95,7 @@ namespace Presentaciones
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(227, 32);
+            this.label7.Location = new System.Drawing.Point(216, 32);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(375, 31);

@@ -45,3 +45,4 @@ C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Presentacio
 C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Presentaciones\obj\Debug\Presentaciones.csproj.CopyComplete
 C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Presentaciones\obj\Debug\Presentaciones.exe
 C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Presentaciones\obj\Debug\Presentaciones.pdb
+C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Presentaciones\obj\Debug\Presentaciones.FrmUsuarios.resources

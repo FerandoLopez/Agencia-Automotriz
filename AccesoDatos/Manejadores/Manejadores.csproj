@@ -45,6 +45,7 @@
     <Compile Include="ManejadorHerramientas.cs" />
     <Compile Include="ManejadorLogin.cs" />
     <Compile Include="ManejadorProductos.cs" />
+    <Compile Include="ManejadorUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

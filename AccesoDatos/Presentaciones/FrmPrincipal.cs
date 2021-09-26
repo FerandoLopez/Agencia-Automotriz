@@ -24,7 +24,9 @@ namespace Presentaciones
 
         private void tsUsuarios_Click(object sender, EventArgs e)
         {
-           
+            FrmUsuarios u = new FrmUsuarios();
+            u.MdiParent = this;
+            u.Show();
         }
 
         private void tsProductos_Click(object sender, EventArgs e)
@@ -39,6 +41,11 @@ namespace Presentaciones
             FrmHerramientas h = new FrmHerramientas();
             h.MdiParent = this;
             h.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

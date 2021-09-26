@@ -8,17 +8,31 @@ namespace Entidades
 {
     public class Usuario
     {
-        private string  _contrasenia, _conpassword, _nombre, _apellidop, _apellidom, _fechanacimiento, _rfc;
-        private int _idusuario, _id_tipo;
+        public int _IdUsuario { get; set; }
+        public string _Nombre { get; set; }
+        public string _Contrasenia { get; set; }
+        public string _ApellidoP { get; set; }
+        public string _ApellidoM { get; set; }
+        public string _FechaNacimiento { get; set; }
+        public string _RFC { get; set; }
+        public int _Id_Tipo { get; set; }
 
-        public string Contrasenia { get => _contrasenia; set => _contrasenia = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Apellidop { get => _apellidop; set => _apellidop = value; }
-        public string Apellidom { get => _apellidom; set => _apellidom = value; }
-        public string Fechanacimiento { get => _fechanacimiento; set => _fechanacimiento = value; }
-        public string Rfc { get => _rfc; set => _rfc = value; }
-        public int Id_tipo { get => _id_tipo; set => _id_tipo = value; }
-        public string Conpassword { get => _conpassword; set => _conpassword = value; }
-        public int Idusuario { get => _idusuario; set => _idusuario = value; }
+        public Usuario(int idusuario, string nombre, string contrasenia, string apellidop, string apellidom, string fechanacimiento, string rfc,int id_tipo)
+        {
+            _IdUsuario = idusuario;
+            _Contrasenia = contrasenia;
+            _Nombre = nombre;
+            _ApellidoP = apellidop;
+            _ApellidoM = apellidom;
+            _FechaNacimiento = fechanacimiento;
+            _RFC = rfc;
+            _Id_Tipo = id_tipo;
+        }
+
+        public Usuario()
+        {
+
+        }
+
     }
 }

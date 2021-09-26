@@ -217,6 +217,7 @@ namespace Presentaciones
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
             this.panel1.ResumeLayout(false);

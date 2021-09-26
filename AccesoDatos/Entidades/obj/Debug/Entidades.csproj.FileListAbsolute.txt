@@ -3,3 +3,4 @@ C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Entidades\b
 C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Entidades\obj\Debug\Entidades.dll
 C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Fernando López\source\repos\Agencia Automotriz\AccesoDatos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
