@@ -14,91 +14,78 @@ namespace Presentaciones
 {
     public partial class FrmProductos : Form
     {
-        private ManejadorProductos _productoM;
-        public static List<Producto> lista = new List<Producto>();
+        ManejadorProductos mp;
+        int i = 0;
+        public static Producto pr;
         public FrmProductos()
         {
             InitializeComponent();
-            _productoM = new ManejadorProductos();
-        }
-
-        public void CargarProductos(string filtro)
-        {
-            dtgProductos.DataSource = _productoM.ObtenerProducto(filtro);
-            dtgProductos.AutoResizeColumns();
-        }
-        private void EliminarProducto()
-        {
-            if (MessageBox.Show("Desea eliminar el producto seleccionado", "Eliminar PRODUCTO", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                var producto = dtgProductos.CurrentRow.Cells["Id"].Value.ToString();
-                _productoM.EliminarProducto(producto);
-            }
-        }
-        private void Limpiar()
-        {
-            txtBuscar.Text = "";
-        }
-
-        public List<Producto> Datos()
-        {
-            var lista = new List<Producto>();
-            var producto = new Producto();
-            producto.Idproducto = int.Parse(dtgProductos.CurrentRow.Cells["Id"].Value.ToString());
-            producto.Codigobarras= dtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
-            producto.Nombre= dtgProductos.CurrentRow.Cells["Nombre"].Value.ToString();
-            producto.Descripcion= dtgProductos.CurrentRow.Cells["Descripcion"].Value.ToString();
-            producto.Marca= dtgProductos.CurrentRow.Cells["Marca"].Value.ToString();
-
-            lista.Add(producto);
-
-            return lista;
+            mp = new ManejadorProductos();
+            pr = new Producto();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FrmAgregarProducto m = new FrmAgregarProducto();
-            m.FormClosing += FrmProductos_FormClosing;
-            m.ShowDialog();
-            Hide();
+            pr._IdProducto = 0;
+            pr._Codigobarras = "";
+            pr._Nombre = "";
+            pr._Descripcion = "";
+            pr._Marca = "";
+            FrmAgregarProducto ap = new FrmAgregarProducto();
+            ap.Dock = DockStyle.Fill;
+            ap.ShowDialog();
+            Actualizar();
+        }
+
+        void Actualizar()
+        {
+            mp.Mostrar(dtgProductos, txtBuscar.Text);
         }
 
         private void FrmProductos_Load(object sender, EventArgs e)
         {
-                Limpiar();
-                CargarProductos("");
+            Actualizar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            EliminarProducto();
-            CargarProductos("");
+            if (dtgProductos.RowCount > 0)
+            {
+                string r = mp.Borrar(pr);
+                if (string.IsNullOrEmpty(r))
+                {
+                    MessageBox.Show(r);
+                    Actualizar();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe elegir un registro");
+            }
+            Actualizar();
+
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            CargarProductos(txtBuscar.Text);
+            Actualizar();
         }
 
-        private void FrmProductos_FormClosed(object sender, FormClosedEventArgs e)
+        private void dtgProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            this.Hide();
+            i = e.RowIndex;
+            pr._IdProducto = int.Parse(dtgProductos.Rows[i].Cells[0].Value.ToString());
+            pr._Codigobarras= dtgProductos.Rows[i].Cells[1].Value.ToString();
+            pr._Nombre= dtgProductos.Rows[i].Cells[2].Value.ToString();
+            pr._Descripcion= dtgProductos.Rows[i].Cells[3].Value.ToString();
+            pr._Marca= dtgProductos.Rows[i].Cells[4].Value.ToString();
         }
 
-        private void dtgProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-            var info = (Producto)dtgProductos.CurrentRow.DataBoundItem;
-            lista = Datos();
-            FrmAgregarProducto m = new FrmAgregarProducto(info);
-            m.FormClosing += FrmProductos_FormClosing;
-            m.Show();
-            Hide();
-        }
-
-        private void FrmProductos_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            CargarProductos("");
-            Show();
+            FrmAgregarProducto ap = new FrmAgregarProducto();
+            ap.ShowDialog();
+            Actualizar();
         }
     }
 }

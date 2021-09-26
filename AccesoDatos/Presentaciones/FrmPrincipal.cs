@@ -29,14 +29,14 @@ namespace Presentaciones
 
         private void tsProductos_Click(object sender, EventArgs e)
         {
-            FrmAgregarProducto p = new FrmAgregarProducto();
+            FrmProductos p = new FrmProductos();
             p.MdiParent = this;
             p.Show();
         }
 
         private void tsHerramientas_Click(object sender, EventArgs e)
         {
-            FrmAgregarHerramienta h = new FrmAgregarHerramienta();
+            FrmHerramientas h = new FrmHerramientas();
             h.MdiParent = this;
             h.Show();
         }

@@ -10,47 +10,56 @@ namespace AccesoDatos
 {
     public class Conexion
     {
-        private MySqlConnection _conn;
+        MySqlConnection _conn;
         string valor = "";
-
-        public Conexion(string server, string user, string password, string database, uint port)
+        public Conexion(string server, string user, string password, string based, uint port)
         {
-            MySqlConnectionStringBuilder cadenaConexion = new MySqlConnectionStringBuilder();
-
-            cadenaConexion.Server = server;
-            cadenaConexion.UserID = user;
-            cadenaConexion.Password = password;
-            cadenaConexion.Database = database;
-            cadenaConexion.Port = port;
-
-            _conn = new MySqlConnection(cadenaConexion.ToString());
+            _conn = new MySqlConnection(string.Format("server={0}; user={1}; password={2}; database = {3}; port = {4}", server, user, password,
+                based, port));
         }
-        public void EjecutarConsulta(string consulta)
+        public string Comando(string q)
+        {
+            try
+            {
+                MySqlCommand c = new MySqlCommand(q, _conn);
+                _conn.Open();
+                c.ExecuteNonQuery();
+                _conn.Close();
+                return "Correcto";
+            }
+            catch (Exception ex)
+            {
+                _conn.Close();
+
+                return ex.Message;
+            }
+        }
+        public DataSet Mostrar(string q, string tabla)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter(q, _conn);
+                _conn.Open();
+                da.Fill(ds, tabla);
+                _conn.Close();
+                return ds;
+            }
+            catch (Exception)
+            {
+                _conn.Close();
+                return ds;
+            }
+        }
+
+        public string ConsultaRetorno(string consulta)
         {
             _conn.Open();
-            var command = new MySqlCommand(consulta, _conn);
-            command.ExecuteNonQuery();
-
-            _conn.Close();
-        }
-        public string EjecutarConsultaRetorno(string consulta)
-        {
-            _conn.Open();
-
             var command = new MySqlCommand(consulta, _conn);
             command.ExecuteNonQuery();
             valor = Convert.ToString(command.ExecuteScalar());
-
             _conn.Close();
             return valor;
-        }
-
-        public DataSet ObtenerDatos(string consulta, string tabla)
-        {
-            var ds = new DataSet();
-            MySqlDataAdapter da = new MySqlDataAdapter(consulta, _conn);
-            da.Fill(ds, tabla);
-            return ds;
         }
     }
 }

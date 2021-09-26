@@ -14,77 +14,20 @@ namespace Presentaciones
 {
     public partial class FrmAgregarHerramienta : Form
     {
-        private ManejadorHerramientas _herramientasManejador;
-        private Herramienta _herramientas;
-        private bool banderaGuardar;
+        ManejadorHerramientas mh;
         public FrmAgregarHerramienta()
         {
             InitializeComponent();
-            _herramientasManejador = new ManejadorHerramientas();
-            _herramientas = new Herramienta();
-            banderaGuardar = true;
-        }
-
-        public FrmAgregarHerramienta(Herramienta h)
-        {
-            InitializeComponent();
-
-            _herramientasManejador = new ManejadorHerramientas();
-            _herramientas = new Herramienta();
-            banderaGuardar = false;
-            txtCodigoHerramienta.Focus();
-            _herramientas = h;
-            txtCodigoHerramienta.Text = _herramientas.Codigoherramienta;
-            txtNombre.Text = _herramientas.Nombre;
-            txtMedida.Text = _herramientas.Medida;
-            txtMarca.Text = _herramientas.Marca;
-            txtDescripcion.Text = _herramientas.Descripcion;
-        }
-
-        private void LimpiarCuadros()
-        {
-            txtCodigoHerramienta.Text = "";
-            txtNombre.Text = "";
-            txtDescripcion.Text = "";
-            txtMarca.Text = "";
-            txtMedida.Text = "";
-        }
-
-        private void Botonera(Boolean guardar, Boolean cancelar)
-        {
-            btnGuardar.Enabled = guardar;
-            btnCancelar.Enabled = cancelar;
-        }
-
-        private void ActualizarHerramienta()
-        {
-            _herramientasManejador.ActualizarHerramienta(new Herramienta
+            mh = new ManejadorHerramientas();
+            if (!FrmHerramientas.h._IdHerramienta.Equals(""))
             {
-                Codigoherramienta = txtCodigoHerramienta.Text,
-                Nombre = txtNombre.Text,
-                Descripcion = txtDescripcion.Text,
-                Marca = txtMarca.Text,
-                Medida = txtMedida.Text,
-            });
+                txtCodigoHerramienta.Text = FrmHerramientas.h._CodigoHerramienta;
+                txtNombre.Text =FrmHerramientas.h._Nombre;
+                txtMedida.Text = FrmHerramientas.h._Medida;
+                txtMarca.Text = FrmHerramientas.h._Marca;
+                txtDescripcion.Text = FrmHerramientas.h._Descripcion;
+            }
         }
-        private void GuardarHerramienta()
-        {
-            _herramientas.Codigoherramienta = txtCodigoHerramienta.Text;
-            _herramientas.Nombre = txtNombre.Text;
-            _herramientas.Descripcion = txtDescripcion.Text;
-            _herramientas.Marca = txtMarca.Text;
-            _herramientas.Medida = txtMedida.Text;
-
-            _herramientasManejador.GuardarProducto(_herramientas);
-
-        }
-
-        private void FrmAgregarHerramienta_Load(object sender, EventArgs e)
-        {
-            txtCodigoHerramienta.Focus();
-            Botonera(true, true);
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -92,18 +35,16 @@ namespace Presentaciones
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (banderaGuardar)
+            if (FrmHerramientas.h._IdHerramienta == 0)
             {
-                GuardarHerramienta();
-                LimpiarCuadros();
+                MessageBox.Show(mh.Guardar(new Herramienta(FrmHerramientas.h._IdHerramienta, txtCodigoHerramienta.Text, txtNombre.Text, txtMedida.Text, txtMarca.Text, txtDescripcion.Text)));
                 Close();
             }
             else
             {
-                ActualizarHerramienta();
-                LimpiarCuadros();
-                Close();
+                MessageBox.Show(mh.Editar(new Herramienta(FrmHerramientas.h._IdHerramienta, txtCodigoHerramienta.Text, txtNombre.Text, txtMedida.Text, txtMarca.Text, txtDescripcion.Text)));
             }
+            Close();
         }
     }
 }

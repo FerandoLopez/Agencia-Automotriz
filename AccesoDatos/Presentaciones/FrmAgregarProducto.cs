@@ -16,90 +16,34 @@ namespace Presentaciones
 
     public partial class FrmAgregarProducto : Form
     {
-        private ManejadorProductos _productosManejador;
-        private Producto _productos;
-        private bool banderaGuardar;
+        ManejadorProductos mp;
         public FrmAgregarProducto()
         {
             InitializeComponent();
-            _productosManejador = new ManejadorProductos();
-            _productos = new Producto();
-            banderaGuardar = true;
-        }
-
-        public FrmAgregarProducto(Producto p)
-        {
-            InitializeComponent();
-            _productosManejador = new ManejadorProductos();
-            _productos = new Producto();
-            banderaGuardar = false;
-            txtCodigoBarra.Focus();
-            _productos = p;
-            txtCodigoBarra.Text = _productos.Codigobarras;
-            txtNombre.Text = _productos.Nombre;
-            txtDescripcion.Text = _productos.Descripcion;
-            txtMarca.Text = _productos.Marca;
-        }
-
-        private void LimpiarCuadros()
-        {
-            txtCodigoBarra.Text = "";
-            txtNombre.Text = "";
-            txtDescripcion.Text = "";
-            txtMarca.Text = "";
-        }
-
-        private void Botonera(Boolean guardar, Boolean cancelar)
-        {
-            btnGuardar.Enabled = guardar;
-            btnCancelar.Enabled = cancelar;
-        }
-
-        private void ActualizarProducto()
-        {
-            _productosManejador.ActualizarProducto(new Producto
+            mp = new ManejadorProductos();
+            if (!FrmProductos.pr._IdProducto.Equals(""))
             {
-                Codigobarras = txtCodigoBarra.Text,
-                Nombre = txtNombre.Text,
-                Descripcion = txtDescripcion.Text,
-                Marca = txtMarca.Text
-            });
+                txtCodigoBarra.Text = FrmProductos.pr._Codigobarras;
+                txtNombre.Text = FrmProductos.pr._Nombre;
+                txtDescripcion.Text = FrmProductos.pr._Descripcion;
+                txtMarca.Text = FrmProductos.pr._Marca;
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (banderaGuardar)
+            if (FrmProductos.pr._IdProducto == 0)
             {
-                GuardarProducto();
-                LimpiarCuadros();
+                MessageBox.Show(mp.Guardar(new Producto(FrmProductos.pr._IdProducto,txtCodigoBarra.Text,txtNombre.Text,txtDescripcion.Text,txtMarca.Text)));
                 Close();
             }
             else
             {
-                ActualizarProducto();
-                LimpiarCuadros();
-                Close();
+                MessageBox.Show(mp.Editar(new Producto(FrmProductos.pr._IdProducto, txtCodigoBarra.Text, txtNombre.Text, txtDescripcion.Text,
+                    txtMarca.Text)));
             }
+            Close();
         }
-
-        private void GuardarProducto()
-        {
-            _productos.Codigobarras = txtCodigoBarra.Text;
-            _productos.Nombre = txtNombre.Text;
-            _productos.Descripcion = txtDescripcion.Text;
-            _productos.Marca = txtMarca.Text;
-
-
-            _productosManejador.GuardarProducto(_productos);
-
-        }
-
-        private void FrmAgregarProducto_Load(object sender, EventArgs e)
-        {
-            txtCodigoBarra.Focus();
-            Botonera(true, true);
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();

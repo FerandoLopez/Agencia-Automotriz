@@ -210,7 +210,6 @@ namespace Presentaciones
             this.Controls.Add(this.label1);
             this.Name = "FrmAgregarProducto";
             this.Text = "FrmAgregarProducto";
-            this.Load += new System.EventHandler(this.FrmAgregarProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

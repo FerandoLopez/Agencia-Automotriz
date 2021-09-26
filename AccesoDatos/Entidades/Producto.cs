@@ -8,13 +8,25 @@ namespace Entidades
 {
     public class Producto
     {
-        private int _idproducto;
-        private string _codigobarras, _nombre, _descripcion, _marca;
+        public int _IdProducto { get; set; }
+        public string _Codigobarras { get; set; }
+        public string _Nombre { get; set; }
+        public string _Descripcion { get; set; }
+        public string _Marca { get; set; }
 
-        public int Idproducto { get => _idproducto; set => _idproducto = value; }
-        public string Codigobarras { get => _codigobarras; set => _codigobarras = value; }
-        public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Descripcion { get => _descripcion; set => _descripcion = value; }
-        public string Marca { get => _marca; set => _marca = value; }
+        public Producto(int idproducto,string codigobarras, string nombre, string descripcion, string marca)
+        {
+            _IdProducto = idproducto;
+            _Codigobarras = codigobarras;
+            _Nombre = nombre;
+            _Descripcion = descripcion;
+            _Marca = marca;
+        }
+
+        public Producto()
+        {
+
+        }
+
     }
 }

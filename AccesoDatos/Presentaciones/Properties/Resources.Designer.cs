@@ -153,6 +153,16 @@ namespace Presentaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_car_80px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_car_80px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_chess_clock_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_chess_clock_48", resourceCulture);

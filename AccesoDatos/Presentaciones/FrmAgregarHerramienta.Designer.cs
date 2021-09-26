@@ -234,7 +234,6 @@ namespace Presentaciones
             this.Controls.Add(this.label1);
             this.Name = "FrmAgregarHerramienta";
             this.Text = "FrmAgregarHerramienta";
-            this.Load += new System.EventHandler(this.FrmAgregarHerramienta_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

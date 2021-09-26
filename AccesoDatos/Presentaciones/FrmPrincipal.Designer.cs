@@ -68,7 +68,7 @@ namespace Presentaciones
             this.tsUsuarios.Image = global::Presentaciones.Properties.Resources.icons8_user_40px;
             this.tsUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsUsuarios.Name = "tsUsuarios";
-            this.tsUsuarios.Size = new System.Drawing.Size(244, 46);
+            this.tsUsuarios.Size = new System.Drawing.Size(173, 46);
             this.tsUsuarios.Text = "Usuarios";
             this.tsUsuarios.Click += new System.EventHandler(this.tsUsuarios_Click);
             // 
@@ -87,7 +87,7 @@ namespace Presentaciones
             this.tsProductos.Image = global::Presentaciones.Properties.Resources.icons8_product_48px;
             this.tsProductos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsProductos.Name = "tsProductos";
-            this.tsProductos.Size = new System.Drawing.Size(252, 54);
+            this.tsProductos.Size = new System.Drawing.Size(191, 54);
             this.tsProductos.Text = "Productos";
             this.tsProductos.Click += new System.EventHandler(this.tsProductos_Click);
             // 
@@ -106,7 +106,7 @@ namespace Presentaciones
             this.tsHerramientas.Image = global::Presentaciones.Properties.Resources.icons8_maintenance_40px;
             this.tsHerramientas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsHerramientas.Name = "tsHerramientas";
-            this.tsHerramientas.Size = new System.Drawing.Size(244, 46);
+            this.tsHerramientas.Size = new System.Drawing.Size(207, 46);
             this.tsHerramientas.Text = "Herramientas";
             this.tsHerramientas.Click += new System.EventHandler(this.tsHerramientas_Click);
             // 
@@ -116,6 +116,7 @@ namespace Presentaciones
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 473);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);

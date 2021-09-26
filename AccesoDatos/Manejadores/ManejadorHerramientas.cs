@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using AccesoDatos;
 using Entidades;
 
@@ -10,48 +11,33 @@ namespace Manejadores
 {
     public class ManejadorHerramientas
     {
-        HerramientaDatos _herramientaD = new HerramientaDatos();
-
-        public void GuardarProducto(Herramienta herramienta)
+        Conexion c = new Conexion("localhost", "root", "12345", "agenciaautomotriz", 3306);
+        public string Guardar(Herramienta herramienta)
         {
-            try
-            {
-                _herramientaD.GuardarHerramienta(herramienta);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("" + ex.Message);
-            }
+            return c.Comando(string.Format("insert into herramientas values(null,'{0}','{1}','{2}','{3}','{4}')",
+                 herramienta._CodigoHerramienta,herramienta._Nombre,herramienta._Medida,herramienta._Marca,herramienta._Descripcion));
         }
 
-        public void ActualizarHerramienta(Herramienta herramienta)
+        public void Mostrar(DataGridView tabla, string dato)
         {
-            try
-            {
-                _herramientaD.ActualizarHerramienta(herramienta);
-            }
-            catch (Exception ex)
-            {
-
-                Console.WriteLine("Fallo la actualización" + ex.Message);
-            }
+            tabla.DataSource = c.Mostrar(string.Format("select * from herramientas where nombre like '%{0}%'", dato), "herramientas").Tables["herramientas"];
+            tabla.AutoResizeColumns();
         }
-        public void EliminarHerramienta(string herramienta)
-        {
-            try
-            {
-                _herramientaD.EliminarHerramienta(herramienta);
-            }
-            catch (Exception ex)
-            {
 
-                Console.WriteLine("Fallo la eliminacion" + ex.Message);
-            }
-        }
-        public List<Herramienta> ObtenerHerramientas(string filtro)
+        public string Editar(Herramienta herramienta)
         {
-            var listaUsuarios = _herramientaD.ObtenerHerramientas(filtro);
-            return listaUsuarios;
+            return c.Comando(string.Format("update herramientas set codigoherramienta='{0}', nombre='{1}', medida='{2}', marca='{3}', descripcion='{4}' where idherramienta='{5}'", herramienta._CodigoHerramienta, herramienta._Nombre, herramienta._Medida, herramienta._Marca, herramienta._Descripcion,herramienta._IdHerramienta));
+        }
+
+        public string Borrar(Herramienta herramienta)
+        {
+            string r = "";
+            DialogResult rs = MessageBox.Show("Está seguro de eliminar " + herramienta._Nombre, "Atencion!", MessageBoxButtons.YesNo);
+            if (rs == DialogResult.Yes)
+            {
+                r = c.Comando(string.Format("delete from herramienta where idherramienta = {0}", herramienta._IdHerramienta));
+            }
+            return r;
         }
     }
 }
