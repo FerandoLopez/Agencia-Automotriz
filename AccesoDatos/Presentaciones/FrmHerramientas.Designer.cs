@@ -184,6 +184,7 @@ namespace Presentaciones
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHerramientas";
             this.Text = "FrmHerramientas";
+            this.Load += new System.EventHandler(this.FrmHerramientas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHerramientas)).EndInit();

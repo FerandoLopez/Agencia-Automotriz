@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Entidades;
 
@@ -48,13 +45,6 @@ namespace AccesoDatos
                 _conn.Close();
                 return permiso;
 
-
-                /*   MySqlCommand c = new MySqlCommand(q, _conn);
-                   _conn.Open();
-                   c.ExecuteNonQuery();
-                   _conn.Close();
-                   var permiso = string.Format("select id_tipo from usuarios where Nombre = '{0}'");
-                   return permiso;*/
             }
             catch (Exception ex)
             {

@@ -116,5 +116,10 @@ namespace Presentaciones
         {
             Close();
         }
+
+        private void FrmHerramientas_Load(object sender, EventArgs e)
+        {
+            Actualizar();
+        }
     }
 }

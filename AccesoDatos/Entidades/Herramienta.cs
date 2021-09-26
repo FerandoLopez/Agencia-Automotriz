@@ -20,6 +20,7 @@ namespace Entidades
             _IdHerramienta = idherramienta;
             _CodigoHerramienta = codigoherramienta;
             _Nombre = nombre;
+            _Medida = medida;
             _Marca = marca;
             _Descripcion = descripcion;
         }

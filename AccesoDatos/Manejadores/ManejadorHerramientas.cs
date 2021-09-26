@@ -26,7 +26,7 @@ namespace Manejadores
 
         public string Editar(Herramienta herramienta)
         {
-            return c.Comando(string.Format("update herramientas set codigoherramienta='{0}', nombre='{1}', medida='{2}', marca='{3}', descripcion='{4}' where idherramienta='{5}'", herramienta._CodigoHerramienta, herramienta._Nombre, herramienta._Medida, herramienta._Marca, herramienta._Descripcion,herramienta._IdHerramienta));
+            return c.Comando(string.Format("update herramientas set CodigoHerramienta='{0}', nombre='{1}', medida='{2}', marca='{3}', descripcion='{4}' where idherramienta='{5}'", herramienta._CodigoHerramienta, herramienta._Nombre, herramienta._Medida, herramienta._Marca, herramienta._Descripcion,herramienta._IdHerramienta));
         }
 
         public string Borrar(Herramienta herramienta)
@@ -35,7 +35,7 @@ namespace Manejadores
             DialogResult rs = MessageBox.Show("Está seguro de eliminar " + herramienta._Nombre, "Atencion!", MessageBoxButtons.YesNo);
             if (rs == DialogResult.Yes)
             {
-                r = c.Comando(string.Format("delete from herramienta where idherramienta = {0}", herramienta._IdHerramienta));
+                r = c.Comando(string.Format("delete from herramientas where IdHerramienta = {0}", herramienta._IdHerramienta));
             }
             return r;
         }
