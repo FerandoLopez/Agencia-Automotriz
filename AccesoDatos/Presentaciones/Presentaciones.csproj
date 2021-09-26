@@ -307,6 +307,10 @@
     <None Include="Resources\success21.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{5d9c8332-84d2-47c5-ab19-2d4a24a08378}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{3183d1d8-0a03-474d-aa5a-521637433e4f}</Project>
       <Name>Entidades</Name>

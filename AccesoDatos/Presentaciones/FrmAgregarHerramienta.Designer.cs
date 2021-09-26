@@ -32,10 +32,7 @@ namespace Presentaciones
             this.txtCodigoHerramienta = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtMedida = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -44,6 +41,9 @@ namespace Presentaciones
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,7 @@ namespace Presentaciones
             this.txtCodigoHerramienta.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoHerramienta.Name = "txtCodigoHerramienta";
             this.txtCodigoHerramienta.Size = new System.Drawing.Size(331, 30);
-            this.txtCodigoHerramienta.TabIndex = 53;
+            this.txtCodigoHerramienta.TabIndex = 1;
             // 
             // label8
             // 
@@ -79,17 +79,6 @@ namespace Presentaciones
             this.panel1.Size = new System.Drawing.Size(662, 95);
             this.panel1.TabIndex = 59;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_maintenance_64px;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -102,38 +91,6 @@ namespace Presentaciones
             this.label7.TabIndex = 15;
             this.label7.Text = "AGREGAR HERRAMIENTA";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Image = global::Presentaciones.Properties.Resources.icons8_cancel_2;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(477, 347);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 52);
-            this.btnCancelar.TabIndex = 58;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = global::Presentaciones.Properties.Resources.icons8_save_close;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(294, 347);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(150, 52);
-            this.btnGuardar.TabIndex = 57;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,7 +98,7 @@ namespace Presentaciones
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(331, 30);
-            this.txtMarca.TabIndex = 56;
+            this.txtMarca.TabIndex = 4;
             // 
             // txtMedida
             // 
@@ -150,7 +107,7 @@ namespace Presentaciones
             this.txtMedida.Margin = new System.Windows.Forms.Padding(4);
             this.txtMedida.Name = "txtMedida";
             this.txtMedida.Size = new System.Drawing.Size(331, 30);
-            this.txtMedida.TabIndex = 55;
+            this.txtMedida.TabIndex = 3;
             // 
             // txtNombre
             // 
@@ -159,7 +116,7 @@ namespace Presentaciones
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(331, 30);
-            this.txtNombre.TabIndex = 54;
+            this.txtNombre.TabIndex = 2;
             // 
             // label3
             // 
@@ -201,7 +158,7 @@ namespace Presentaciones
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(331, 30);
-            this.txtDescripcion.TabIndex = 62;
+            this.txtDescripcion.TabIndex = 5;
             // 
             // label4
             // 
@@ -214,11 +171,54 @@ namespace Presentaciones
             this.label4.TabIndex = 61;
             this.label4.Text = "Descripción";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_maintenance_64px;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = global::Presentaciones.Properties.Resources.icons8_cancel_2;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(477, 347);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(150, 52);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = global::Presentaciones.Properties.Resources.icons8_save_close;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(294, 347);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(150, 52);
+            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // FrmAgregarHerramienta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 450);
+            this.ClientSize = new System.Drawing.Size(661, 428);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCodigoHerramienta);
@@ -232,8 +232,10 @@ namespace Presentaciones
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgregarHerramienta";
             this.Text = "FrmAgregarHerramienta";
+            this.Load += new System.EventHandler(this.FrmAgregarHerramienta_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

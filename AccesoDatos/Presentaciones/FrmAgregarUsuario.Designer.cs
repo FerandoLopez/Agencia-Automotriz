@@ -59,7 +59,7 @@ namespace Presentaciones
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(331, 30);
-            this.txtNombre.TabIndex = 53;
+            this.txtNombre.TabIndex = 1;
             // 
             // label8
             // 
@@ -102,7 +102,7 @@ namespace Presentaciones
             this.txtApellidoM.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoM.Name = "txtApellidoM";
             this.txtApellidoM.Size = new System.Drawing.Size(331, 30);
-            this.txtApellidoM.TabIndex = 56;
+            this.txtApellidoM.TabIndex = 4;
             // 
             // txtApellidoP
             // 
@@ -111,7 +111,7 @@ namespace Presentaciones
             this.txtApellidoP.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidoP.Name = "txtApellidoP";
             this.txtApellidoP.Size = new System.Drawing.Size(331, 30);
-            this.txtApellidoP.TabIndex = 55;
+            this.txtApellidoP.TabIndex = 3;
             // 
             // txtContraseña
             // 
@@ -120,7 +120,7 @@ namespace Presentaciones
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(331, 30);
-            this.txtContraseña.TabIndex = 54;
+            this.txtContraseña.TabIndex = 2;
             // 
             // label3
             // 
@@ -162,7 +162,7 @@ namespace Presentaciones
             this.txtNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.txtNacimiento.Name = "txtNacimiento";
             this.txtNacimiento.Size = new System.Drawing.Size(331, 30);
-            this.txtNacimiento.TabIndex = 62;
+            this.txtNacimiento.TabIndex = 5;
             // 
             // label4
             // 
@@ -182,7 +182,7 @@ namespace Presentaciones
             this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(331, 30);
-            this.txtRFC.TabIndex = 64;
+            this.txtRFC.TabIndex = 6;
             // 
             // label5
             // 
@@ -217,7 +217,7 @@ namespace Presentaciones
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(150, 52);
-            this.btnCancelar.TabIndex = 58;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -233,7 +233,7 @@ namespace Presentaciones
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(150, 52);
-            this.btnGuardar.TabIndex = 57;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -256,7 +256,7 @@ namespace Presentaciones
             this.cbPermiso.Location = new System.Drawing.Point(293, 381);
             this.cbPermiso.Name = "cbPermiso";
             this.cbPermiso.Size = new System.Drawing.Size(331, 33);
-            this.cbPermiso.TabIndex = 66;
+            this.cbPermiso.TabIndex = 7;
             // 
             // FrmAgregarUsuario
             // 
@@ -280,6 +280,7 @@ namespace Presentaciones
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgregarUsuario";
             this.Text = "FrmAgregarUsuario";
             this.Load += new System.EventHandler(this.FrmAgregarUsuario_Load);

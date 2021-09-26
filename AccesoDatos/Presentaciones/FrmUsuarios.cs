@@ -19,11 +19,41 @@ namespace Presentaciones
         ManejadorUsuarios mu;
         int i = 0;
         public static Usuario us;
-        public FrmUsuarios()
+        public FrmUsuarios(int idTipo)
         {
             InitializeComponent();
             mu = new ManejadorUsuarios();
             us = new Usuario();
+            if (idTipo == 1)
+            {
+                this.btnAgregar.Enabled = true;
+                this.btnModificar.Enabled = true;
+                this.btnEliminar.Enabled = true;
+            }
+            if (idTipo == 2)
+            {
+                this.btnAgregar.Enabled = false;
+                this.btnModificar.Enabled = false;
+                this.btnEliminar.Enabled = false;
+            }
+            if (idTipo == 3)
+            {
+                this.btnAgregar.Enabled = true;
+                this.btnModificar.Enabled = true;
+                this.btnEliminar.Enabled = true;
+            }
+            if (idTipo == 4)
+            {
+                this.btnAgregar.Enabled = false;
+                this.btnModificar.Enabled = false;
+                this.btnEliminar.Enabled = true;
+            }
+            if (idTipo == 5)
+            {
+                this.btnAgregar.Enabled = false;
+                this.btnModificar.Enabled = true;
+                this.btnEliminar.Enabled = false;
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -41,6 +71,8 @@ namespace Presentaciones
             au.ShowDialog();
             Actualizar();
         }
+
+
         void Actualizar()
         {
             mu.Mostrar(dtgUsuarios, txtBuscar.Text);
@@ -92,6 +124,11 @@ namespace Presentaciones
             FrmAgregarUsuario au = new FrmAgregarUsuario();
             au.ShowDialog();
             Actualizar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -46,5 +46,9 @@ namespace Presentaciones
             }
             Close();
         }
+
+        private void FrmAgregarHerramienta_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

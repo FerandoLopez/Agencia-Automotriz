@@ -34,10 +34,11 @@ namespace Presentaciones
             this.dtgProductos = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,7 +84,7 @@ namespace Presentaciones
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(589, 30);
-            this.txtBuscar.TabIndex = 15;
+            this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
@@ -96,6 +97,20 @@ namespace Presentaciones
             this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "Buscar";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Image = global::Presentaciones.Properties.Resources.icons8_edit_property;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(277, 407);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(167, 43);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // pictureBox2
             // 
@@ -113,11 +128,11 @@ namespace Presentaciones
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::Presentaciones.Properties.Resources.icons8_delete_property;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(610, 407);
+            this.btnEliminar.Location = new System.Drawing.Point(452, 407);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(167, 43);
-            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -127,34 +142,37 @@ namespace Presentaciones
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = global::Presentaciones.Properties.Resources.icons8_add_property;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(260, 407);
+            this.btnAgregar.Location = new System.Drawing.Point(102, 407);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(167, 43);
-            this.btnAgregar.TabIndex = 17;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnModificar
+            // btnCancelar
             // 
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Image = global::Presentaciones.Properties.Resources.icons8_edit_property;
-            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(435, 407);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(167, 43);
-            this.btnModificar.TabIndex = 21;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Image = global::Presentaciones.Properties.Resources.icons8_cancel_2;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(627, 407);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(167, 43);
+            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 463);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -163,6 +181,7 @@ namespace Presentaciones
             this.Controls.Add(this.dtgProductos);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProductos";
             this.Text = "FrmProductos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
@@ -186,5 +205,6 @@ namespace Presentaciones
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

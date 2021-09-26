@@ -53,7 +53,7 @@ namespace Presentaciones
             this.txtCodigoBarra.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(331, 30);
-            this.txtCodigoBarra.TabIndex = 39;
+            this.txtCodigoBarra.TabIndex = 1;
             // 
             // label8
             // 
@@ -96,7 +96,7 @@ namespace Presentaciones
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(331, 30);
-            this.txtMarca.TabIndex = 42;
+            this.txtMarca.TabIndex = 4;
             // 
             // txtDescripcion
             // 
@@ -105,7 +105,7 @@ namespace Presentaciones
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(331, 30);
-            this.txtDescripcion.TabIndex = 41;
+            this.txtDescripcion.TabIndex = 3;
             // 
             // txtNombre
             // 
@@ -114,7 +114,7 @@ namespace Presentaciones
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(331, 30);
-            this.txtNombre.TabIndex = 40;
+            this.txtNombre.TabIndex = 2;
             // 
             // label3
             // 
@@ -171,7 +171,7 @@ namespace Presentaciones
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(150, 52);
-            this.btnCancelar.TabIndex = 47;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -187,7 +187,7 @@ namespace Presentaciones
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(150, 52);
-            this.btnGuardar.TabIndex = 46;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -208,6 +208,7 @@ namespace Presentaciones
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgregarProducto";
             this.Text = "FrmAgregarProducto";
             this.panel1.ResumeLayout(false);

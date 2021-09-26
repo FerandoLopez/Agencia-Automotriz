@@ -17,11 +17,42 @@ namespace Presentaciones
         ManejadorProductos mp;
         int i = 0;
         public static Producto pr;
-        public FrmProductos()
+        public FrmProductos(int idTipo)
         {
             InitializeComponent();
             mp = new ManejadorProductos();
             pr = new Producto();
+
+            if (idTipo == 1)
+            {
+                this.btnAgregar.Enabled = true;
+                this.btnModificar.Enabled = true;
+                this.btnEliminar.Enabled = true;
+            }
+            if (idTipo == 2)
+            {
+                this.btnAgregar.Enabled = false;
+                this.btnModificar.Enabled = false;
+                this.btnEliminar.Enabled = false;
+            }
+            if (idTipo == 3)
+            {
+                this.btnAgregar.Enabled = true;
+                this.btnModificar.Enabled = true;
+                this.btnEliminar.Enabled = true;
+            }
+            if (idTipo == 4)
+            {
+                this.btnAgregar.Enabled = false;
+                this.btnModificar.Enabled = false;
+                this.btnEliminar.Enabled = true;
+            }
+            if (idTipo == 5)
+            {
+                this.btnAgregar.Enabled = false;
+                this.btnModificar.Enabled = true;
+                this.btnEliminar.Enabled = false;
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -86,6 +117,11 @@ namespace Presentaciones
             FrmAgregarProducto ap = new FrmAgregarProducto();
             ap.ShowDialog();
             Actualizar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
