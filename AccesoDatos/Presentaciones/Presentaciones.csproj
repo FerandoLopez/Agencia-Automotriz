@@ -62,6 +62,12 @@
     <Compile Include="FrmHerramientas.Designer.cs">
       <DependentUpon>FrmHerramientas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHerramientas.resx">
       <DependentUpon>FrmHerramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -268,12 +277,6 @@
     <None Include="Resources\success21.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_product_128px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_search_128px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{3183d1d8-0a03-474d-aa5a-521637433e4f}</Project>
       <Name>Entidades</Name>
@@ -282,6 +285,27 @@
       <Project>{7804eb3b-5123-4845-b804-c9a896262e4e}</Project>
       <Name>Manejadores</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_maintenance_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_maintenance_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_product_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_product_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_product_128px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_40px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
