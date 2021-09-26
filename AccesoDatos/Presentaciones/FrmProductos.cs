@@ -29,7 +29,7 @@ namespace Presentaciones
         }
         private void EliminarProducto()
         {
-            if (MessageBox.Show("Desea eliminar el producto seleccionado", "Eliminar usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Desea eliminar el producto seleccionado", "Eliminar PRODUCTO", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 var producto = dtgProductos.CurrentRow.Cells["Id"].Value.ToString();
                 _productoM.EliminarProducto(producto);
