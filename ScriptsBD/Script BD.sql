@@ -18,11 +18,11 @@ Descripcion varchar(45));
 create table Usuarios(
 IdUsuario int primary key auto_increment,
 Nombre varchar(45),
+Contrasenia varchar(45),
 ApellidoP varchar(45),
 ApellidoM varchar(45),
 FechaNacimiento varchar(45),
 rfc varchar(45),
-contrasenia varchar(45),
 id_tipo int,
 foreign key (id_tipo) references Permisos (id));
 
