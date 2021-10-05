@@ -24,11 +24,16 @@ ApellidoM varchar(45),
 FechaNacimiento varchar(45),
 rfc varchar(45),
 id_tipo int,
-foreign key (id_tipo) references Permisos (id));
+id_perfil int,
+foreign key (id_tipo) references Permisos (id),
+foreign key (id_perfil) references Perfiles (id));
 
 create table Permisos(
 id int primary key not null auto_increment,
 nombre varchar(45));
 
+insert into usuarios values(null,'Fernando',12345,'Lopez','Grajeda','27/01/2001','LOGF32D',1);
 
-
+create table Perfiles(
+id int primary key not null auto_increment,
+nombre varchar(45));
