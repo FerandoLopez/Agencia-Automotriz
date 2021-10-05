@@ -16,8 +16,9 @@ namespace Entidades
         public string _FechaNacimiento { get; set; }
         public string _RFC { get; set; }
         public int _Id_Tipo { get; set; }
+        public int _Id_Perfil { get; set; }
 
-        public Usuario(int idusuario, string nombre, string contrasenia, string apellidop, string apellidom, string fechanacimiento, string rfc,int id_tipo)
+        public Usuario(int idusuario, string nombre, string contrasenia, string apellidop, string apellidom, string fechanacimiento, string rfc,int id_tipo, int id_perfil)
         {
             _IdUsuario = idusuario;
             _Contrasenia = contrasenia;
@@ -27,6 +28,7 @@ namespace Entidades
             _FechaNacimiento = fechanacimiento;
             _RFC = rfc;
             _Id_Tipo = id_tipo;
+            _Id_Perfil = id_perfil;
         }
 
         public Usuario()

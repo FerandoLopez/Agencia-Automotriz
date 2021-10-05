@@ -32,6 +32,7 @@ namespace Presentaciones
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtApellidoM = new System.Windows.Forms.TextBox();
             this.txtApellidoP = new System.Windows.Forms.TextBox();
@@ -43,11 +44,12 @@ namespace Presentaciones
             this.label4 = new System.Windows.Forms.Label();
             this.txtRFC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cbPermiso = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +84,17 @@ namespace Presentaciones
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 95);
             this.panel1.TabIndex = 59;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_player_male_48;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // label7
             // 
@@ -195,17 +208,6 @@ namespace Presentaciones
             this.label5.TabIndex = 63;
             this.label5.Text = "RFC";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentaciones.Properties.Resources.icons8_player_male_48;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
@@ -213,7 +215,7 @@ namespace Presentaciones
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = global::Presentaciones.Properties.Resources.icons8_cancel_2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(476, 444);
+            this.btnCancelar.Location = new System.Drawing.Point(474, 520);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(150, 52);
@@ -229,7 +231,7 @@ namespace Presentaciones
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = global::Presentaciones.Properties.Resources.icons8_save_close;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(293, 444);
+            this.btnGuardar.Location = new System.Drawing.Point(291, 520);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(150, 52);
@@ -258,11 +260,33 @@ namespace Presentaciones
             this.cbPermiso.Size = new System.Drawing.Size(331, 33);
             this.cbPermiso.TabIndex = 7;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(53, 464);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 25);
+            this.label9.TabIndex = 66;
+            this.label9.Text = "Perfil";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(293, 456);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(333, 33);
+            this.comboBox1.TabIndex = 67;
+            // 
             // FrmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 533);
+            this.ClientSize = new System.Drawing.Size(654, 585);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cbPermiso);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtRFC);
@@ -313,5 +337,7 @@ namespace Presentaciones
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbPermiso;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
