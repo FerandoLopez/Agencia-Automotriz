@@ -42,6 +42,10 @@ namespace Presentaciones
             {
                 this.administraciónDeUsuariosToolStripMenuItem.Visible = false;
             }
+            if (idTipo==6)
+            {
+                this.administraciónDeUsuariosToolStripMenuItem.Visible = false;
+            }
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)

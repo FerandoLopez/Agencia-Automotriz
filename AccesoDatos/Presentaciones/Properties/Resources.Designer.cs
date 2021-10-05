@@ -473,6 +473,16 @@ namespace Presentaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_profile_96px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_profile_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_purchase_order_128px {
             get {
                 object obj = ResourceManager.GetObject("icons8_purchase_order_128px", resourceCulture);

@@ -89,7 +89,7 @@ namespace Presentaciones
             this.tsProductos.Image = global::Presentaciones.Properties.Resources.icons8_product_48px;
             this.tsProductos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsProductos.Name = "tsProductos";
-            this.tsProductos.Size = new System.Drawing.Size(252, 54);
+            this.tsProductos.Size = new System.Drawing.Size(191, 54);
             this.tsProductos.Text = "Productos";
             this.tsProductos.Click += new System.EventHandler(this.tsProductos_Click);
             // 
@@ -108,7 +108,7 @@ namespace Presentaciones
             this.tsHerramientas.Image = global::Presentaciones.Properties.Resources.icons8_maintenance_40px;
             this.tsHerramientas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsHerramientas.Name = "tsHerramientas";
-            this.tsHerramientas.Size = new System.Drawing.Size(244, 46);
+            this.tsHerramientas.Size = new System.Drawing.Size(207, 46);
             this.tsHerramientas.Text = "Herramientas";
             this.tsHerramientas.Click += new System.EventHandler(this.tsHerramientas_Click);
             // 

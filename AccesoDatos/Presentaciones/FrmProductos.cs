@@ -53,6 +53,12 @@ namespace Presentaciones
                 this.btnModificar.Enabled = true;
                 this.btnEliminar.Enabled = false;
             }
+            if (idTipo==6)
+            {
+                this.btnAgregar.Enabled = false;
+                this.btnModificar.Enabled = false;
+                this.btnEliminar.Enabled = false;
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
